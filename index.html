@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html ng-app="demoApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Demo App</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width-device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body ng-controller="mainController as app">
+
+<nav class="navbar navbar-dark bg-fade">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavBar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand">DemoApp</a>
+        </div>
+        <div class="collapse navbar-collapse" id="mainNavBar">
+            <ul class="nav navbar-nav">
+                <li class="active dropdown1">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown1">All Products</a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-submenu">
+                            <a tabindex="-1" href="#">More options</a>
+                            <ul class="dropdown-menu">
+                                <li>ABC</li>
+                                <li>ABC</li>
+                                <li>ABC</li>
+                            </ul>
+                        </li>
+                    </ul>
+         <!--           <ul class="dropdown-menu" role="menu">
+                        <li class="dropdown-submenu"><a class="dropdown-item" href="#">Semi Conductors</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Germanium</a></li>
+                                <li><a class="dropdown-item" href="#">Silicon</a></li>
+                                <li><a class="dropdown-item" href="#">Silicon carbide</a></li>
+                                <li><a class="dropdown-item" href="#">Gallium arsenide</a></li>
+                                <li><a class="dropdown-item" href="#">Gallium Nitride</a></li>
+                                <li><a class="dropdown-item" href="#">allium phosphide</a></li>
+                                <li><a class="dropdown-item" href="#">Lead sulphide</a></li>
+                            </ul>
+                        </li>
+
+
+                        <li class="dropdown-submenu"><a class="dropdown-item" href="#">Diodes</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Backward diode</a></li>
+                                <li><a class="dropdown-item" href="#">BARITT diode</a></li>
+                                <li><a class="dropdown-item" href="#">Laser diode</a></li>
+                                <li><a class="dropdown-item" href="#">Gunn diode</a></li>
+                                <li><a class="dropdown-item" href="#">Light emitting diodes</a></li>
+                                <li><a class="dropdown-item" href="#">Photodiode</a></li>
+                                <li><a class="dropdown-item" href="#">PIN diode</a></li>
+                                <li><a class="dropdown-item" href="#">PN junction</a></li>
+                                <li><a class="dropdown-item" href="#">Schottky diodes</a></li>
+                                <li><a class="dropdown-item" href="#">Step recovery diode</a></li>
+                                <li><a class="dropdown-item" href="#">Tunnel diode</a></li>
+                                <li><a class="dropdown-item" href="#">Tunnel diode</a></li>
+                                <li><a class="dropdown-item" href="#">Varactor diode or varicap diode</a></li>
+                                <li><a class="dropdown-item" href="#">Zener diode</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="dropdown-item" href="#">Silicon</a></li>
+                    </ul>-->
+                </li>
+                <li class="dropdown2">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown2">Semi Conducters</a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a class="dropdown-item" href="#">Germanium</a></li>
+                        <li><a class="dropdown-item" href="#">Silicon</a></li>
+                        <li><a class="dropdown-item" href="#">Silicon carbide</a></li>
+                        <li><a class="dropdown-item" href="#">Gallium arsenide</a></li>
+                        <li><a class="dropdown-item" href="#">Gallium Nitride</a></li>
+                        <li><a class="dropdown-item" href="#">allium phosphide</a></li>
+                        <li><a class="dropdown-item" href="#">Lead sulphide</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown3">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown3">Diodes</a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a class="dropdown-item" href="#">Backward diode</a></li>
+                        <li><a class="dropdown-item" href="#">BARITT diode</a></li>
+                        <li><a class="dropdown-item" href="#">Laser diode</a></li>
+                        <li><a class="dropdown-item" href="#">Gunn diode</a></li>
+                        <li><a class="dropdown-item" href="#">Light emitting diodes</a></li>
+                        <li><a class="dropdown-item" href="#">Photodiode</a></li>
+                        <li><a class="dropdown-item" href="#">PIN diode</a></li>
+                        <li><a class="dropdown-item" href="#">PN junction</a></li>
+                        <li><a class="dropdown-item" href="#">Schottky diodes</a></li>
+                        <li><a class="dropdown-item" href="#">Step recovery diode</a></li>
+                        <li><a class="dropdown-item" href="#">Tunnel diode</a></li>
+                        <li><a class="dropdown-item" href="#">Tunnel diode</a></li>
+                        <li><a class="dropdown-item" href="#">Varactor diode or varicap diode</a></li>
+                        <li><a class="dropdown-item" href="#">Zener diode</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="text-center">
+    <h2>Electronic Components</h2>
+</div>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <ui-view></ui-view>
+    </div>
+</div>
+
+
+<script src="node_modules/angular/angular.js"></script>
+<script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="./js/app.js"></script>
+<script src="./js/config.js"></script>
+<script src="./components/home/home.js"></script>
+
+<script>
+    $('ul.nav li.dropdown1').hover(function () {
+        $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+    }, function () {
+        $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+    });
+    $('ul.nav li.dropdown2').hover(function () {
+        $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+    }, function () {
+        $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+    });
+    $('ul.nav li.dropdown3').hover(function () {
+        $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+    }, function () {
+        $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+    });
+</script>
+
+</body>
+</html>

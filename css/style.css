@@ -1,0 +1,14 @@
+.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+}
+
+.navbar .navbar-collapse {
+    text-align: center;
+}
+
+.navbar-nav > li{
+    padding-left:40px;
+    padding-right:40px
+}

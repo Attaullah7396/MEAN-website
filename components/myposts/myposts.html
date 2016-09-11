@@ -1,0 +1,36 @@
+<ion-view>
+  <ion-content>
+    <br>
+    <br>
+    <div class="card" ng-repeat="item in myposts.posts"
+         ng-show="myposts.savedPostsArray.indexOf(item.key)!=-1">
+      <div class="item item-avatar">
+        <img src="../../img/imran.jpg">
+      <div>
+        <h2 ng-bind="item.name"></h2>
+        <p>{{item.time | date: 'medium'}}</p>
+      </div>
+        </div>
+
+
+    <div class="item item-text-wrap" style="padding-top:10px">
+      <p ng-bind="item.content"></p>
+      <span>Skills  :  </span>
+        <span ng-repeat="skill in item.skills track by $index">{{skill}} <span
+          ng-if="$index+1 != item.skills.length">,</span> </span>
+
+      <div class="buttons">
+        <button class="button button-outline button-calm leftMargin40 margin5"
+                ng-click="myposts.UnSavePost(item.key)">
+          Unsave
+        </button>
+        <button ng-disabled="myposts.myProposalsArray.indexOf(item.key)!=-1  || item.uid == home.uid"
+                ui-sref="menu.proposal({key:item.key,uid:item.uid})"
+                class="button button-outline button-calm float-right rightMargin40 margin5">
+          Send proposal
+        </button>
+        </div>
+    </div>
+    </div>
+  </ion-content>
+</ion-view>

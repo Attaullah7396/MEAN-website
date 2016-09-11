@@ -1,0 +1,77 @@
+<ion-view view-title="My Profile">
+
+  <ion-content style="background-color:#f8f8f6;">
+
+<!--<br/ 83,73,118 , 9>-->
+    <div class="item-image1 profile-item-image">
+<!--<div class="profile-image">-->
+      <!--<div style="background:rgba( 62,73,118 , 0.9)">-->
+          <p class="profile-user-name"> John Ducket  </p>
+   <!--<span>&nbsp; <i class="icon ion-edit"></i></span>-->
+        <!--<div class="row">
+          <div class="col col-center">
+            <img class="profile-userImg" src="../../img/imran.jpg">
+               <i class="ion-android-add-circle add-btn" ng-click="picture.add()"></i>
+
+          </div>
+          </div>-->
+          <div style="position: relative;left: 21px;text-align: center;">
+                <div class="editProfile">
+      <div class="row">
+            <div class="col">
+                <button class="button button-circle chat-icon icon ion-edit" ui-sref="menu.addpost"></button>
+            </div>
+      </div>
+  </div>
+             <img class="upload-picture padding" src="./img/imran.jpg" alt="Profile Pic" style="border-radius: 164px;">
+    <!--</div>-->
+    
+            <i class="ion-android-add-circle add-btn" ng-click="profile.add()"></i>
+            
+            <!--<div class="chat-icon">
+              <i class="icon ion-ios-chatbubble-outline"></i>
+            </div>-->
+            <div class="fixed-outside">
+      <div class="row">
+            <div class="col">
+                <button class="button button-circle chat-icon icon ion-ios-chatbubble-outline" ui-sref="menu.addpost"></button>
+            </div>
+      </div>
+  </div>   
+
+</div>
+          <br>
+
+        <p class="simpleColor"> <i class="icon ion-university" style="font-size: 51px; color: #44c57b;"></i> <span>Student</span> </p>
+        <br/>
+         <p class="simpleColor"><i class="icon ion-ios-star" style="color:#44c57b;font-size: 51px;"></i> <span>60+ Reviews</span></p>
+<br/>
+        
+      <!--</div>-->
+<!--</div>-->
+    </div>
+    
+
+    <ion-tabs  class="tabs-icon-top">
+
+      <ion-tab title="About" icon-on="icon ion-person" icon-off="icon ion-person" href="#/menu/profile/tabs">
+        <ion-nav-view name="about"></ion-nav-view>
+      </ion-tab>
+
+      <ion-tab title="Overview" icon-on="icon ion-clipboard" icon-off="icon ion-clipboard" href="#/menu/profile/tabs">
+        <ion-nav-view name="overview"></ion-nav-view>
+      </ion-tab>
+
+      <ion-tab title="Reviews" icon-on="icon ion-chatbubbles" icon-off="icon ion-chatbubbles" href="#/menu/profile/tabs">
+        <ion-nav-view name="reviews"></ion-nav-view>
+      </ion-tab>
+
+    </ion-tabs>
+
+
+
+
+
+  </ion-content>
+
+</ion-view>

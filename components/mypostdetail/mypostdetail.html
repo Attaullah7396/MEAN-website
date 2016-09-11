@@ -1,0 +1,39 @@
+<ion-view>
+  <ion-content>
+
+    <div class="card">
+      <div class="item item-text-wrap">
+        <p> {{mydetail.name}} sent you proposal.</p>
+      </div>
+    </div>
+
+    <div class="card" ng-repeat="item in mydetail.postsArray" ng-show="item.key == mydetail.key">
+      <div class="item item-text-wrap">
+        <p class="firstCapital font13" ui-sref="menu.otherProfile({userId:item.uid})">{{item.name}}</p>
+        <p>{{item.time | date:'medium'}}</p>
+        <br>
+        <p>{{item.content}}</p>
+
+        <button class="button button-full button-positive" ng-click="mydetail.trigger=!mydetail.trigger">
+          <span ng-if="!mydetail.trigger">View all Proposals</span>
+          <span ng-if="mydetail.trigger">Hide Proposals</span>
+          &nbsp; &nbsp; &nbsp;
+          <span ng-if="!mydetail.trigger" class="icon ion-arrow-down-b"></span>
+          <span ng-if="mydetail.trigger" class="icon ion-arrow-up-b"></span>
+        </button>
+        <ul class="list" ng-show="mydetail.trigger">
+          <li class="item" ng-repeat="item in mydetail.proposals">
+            <div class="card">
+              <div class="item item-text-wrap">
+                <p class="font13 firstCapital fontBlack">{{item.name}}</p>
+                <p class="smallFont">{{item.time | date:'medium'}}</p>
+                <p>{{item.text}}</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>

@@ -1,0 +1,52 @@
+
+
+
+<ion-view>
+  
+  <ion-nav-bar>
+  <ion-nav-back-button>
+  </ion-nav-back-button>
+</ion-nav-bar>
+  <div class="bar bar-header background-color">
+    <h1 class="title loginHeader">Mobile Number</h1>
+  </div>
+  <ion-content style="background-color:#f8f8f6;">
+    <div class="padding" style="text-align:center;margin-top: 86px;">
+    <h4 style="font-weight: bold;">Please Enter Your Mobile Number</h4>
+    <p style="font-size: smaller;">By Providing your Your Mobile Number You and your client reach each other more easily. You can also hide your number through user settings.So no one can see your number.</p>
+    </div>
+     
+     <br>
+     <div class="padding">
+         
+        <!--<select style="background: inherit;">
+          <option disabled>{{mobileNo.selectedCode}}</option>
+        </select>-->
+      <label class="item item-input padding">
+         {{mobileNo.selectedCode}}  <input type="number" ng-model="mobileNo.number" minlength="6" required placeholder="98384773" style="position: absolute;top: 3px;left: 50px;color: #4c4c4c;font-size: 16px;">
+         </label>
+         </div>
+  <!--<ion-content>
+
+    <form name="mobileNoForm">
+
+      <select>
+        <option disabled>{{mobileNo.selectedCode}}</option>
+      </select>
+      <input type="number" ng-model="mobileNo.number" required>
+
+      <br>
+
+      <button ng-disabled="mobileNoForm.$invalid"  ng-click="mobileNo.next()">Next</button>
+    </form>
+
+    <a ui-sref="qualification">Next</a>-->
+  </ion-content>
+    <div class="bar bar-footer registerFotterBar">
+  <div style="width:100%; text-align:center;">
+   <button class="button button-balanced" style="width:100%; font-size: 23px;" ng-disabled="!mobileNo.number" ng-click="mobileNo.next()">
+           Next
+       </button>
+ </div>
+ </div>
+</ion-view>

@@ -1,0 +1,127 @@
+<ion-view class="background-color" view-title="Mani">
+  <!--<ion-content>
+      <div class="messageDetailDiv card">
+
+      </div>
+      <div class="padding">
+
+        <label class="item item-input padding" style="line-height: 0;">
+            <input type="text" placeholder="Type your Message" style="color: #4c4c4c;font-size: 16px;">
+           <span><button class="button-border-none float-right rightMargin40 margin5" style="color: limegreen; margin-right:0;">
+              <i class="ion-android-send"></i>
+            </button></span>
+           </label>
+
+           </div>
+           <br>
+      </ion-content>-->
+  <ion-content has-bouncing="true" class="has-header has-footer"
+               delegate-handle="userMessageScroll">
+    <div class="messageDetailDiv card">
+
+
+      <div class="message-wrapper"
+           on-hold="">
+
+        <div>
+
+          <img class="profile-pic" style="position: relative;top: 22px;right: 232px;"
+               src="./img/imran.jpg"/>
+
+          <div class="chat-bubble left">
+
+            <div class="message">
+              Hi Baby How are you?
+            </div>
+
+            <div class="message-detail">
+                              <span
+                                class="bold">Imran</span>,
+              <span>3 days ago</span>
+            </div>
+
+          </div>
+        </div>
+
+        <div>
+          <img class="profile-pic right"
+               src="./img/nagin.jpg"/>
+
+          <div class="chat-bubble right">
+
+            <div class="message">
+              Get Lost you Fucking Idiot.
+            </div>
+
+            <div class="message-detail">
+                              <span
+                                class="bold">Nagin</span>,
+              <span> 1 sec ago</span>
+            </div>
+
+          </div>
+
+        </div>
+        <div>
+
+          <img class="profile-pic right"
+               src="./img/nagin.jpg"/>
+
+          <div class="chat-bubble right">
+
+            <div class="message">
+              Get Lost you Fucking Idiot.
+            </div>
+
+            <div class="message-detail">
+                              <span
+                                class="bold">Nagin</span>,
+              <span> 1 sec ago</span>
+            </div>
+
+          </div>
+
+        </div>
+        <div>
+
+          <img class="profile-pic right"
+               src="./img/nagin.jpg" onerror=""/>
+
+          <div class="chat-bubble right">
+
+            <div class="message" autolinker>
+              Get Lost you Fucking Idiot.
+            </div>
+
+            <div class="message-detail">
+                              <span
+                                class="bold">Nagin</span>,
+              <span> 1 sec ago</span>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="cf"></div>
+
+      </div>
+    </div>
+
+    <div class="padding-custom">
+      <form name="sendMsgForm">
+        <div class="item item-input padding" style="line-height: 0; padding-top: 0;padding-bottom: 0;">
+          <input type="text" required ng-model="msgDetail.content" placeholder="Type your Message"
+                 style="color: #4c4c4c;font-size: 16px;">
+         <span><button ng-disabled="sendMsgForm.$invalid" ng-click="msgDetail.sendMessage(msgDetail.content)"
+                       class="button-border-none float-right rightMargin40 margin5"
+                       style="color: limegreen; margin-right:0;">
+            <i class="ion-android-send"></i>
+          </button></span>
+        </div>
+      </form>
+    </div>
+    <br>
+  </ion-content>
+
+</ion-view>

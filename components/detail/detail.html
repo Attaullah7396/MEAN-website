@@ -1,0 +1,31 @@
+<ion-view>
+  <ion-content>
+
+    <div class="card">
+      <div class="item item-text-wrap" style="font-size: 1.3em">
+          {{posts[detail.index].text}}
+      </div>
+
+      <h2 style="text-align: center">Proposals</h2>
+
+      <div class="item item-text-wrap" ng-repeat="item in posts[detail.index].proposers track by $index">
+        <p ng-show="item.proposed"><span class="firstWord" style="font-size: 1.3em;">{{item.name}}</span> -- {{item.content}}</p>
+      </div>
+
+      <h2 style="text-align: center;color: rgb(33, 154, 137)">Comments</h2>
+
+      <div class="item item-text-wrap" ng-repeat="item in posts[detail.index].comments track by $index">
+        <p><span class="firstWord" style="font-size: 1.3em;font-weight: bold;">{{item.name}}</span> -- {{item.text}}</p>
+      </div>
+      <div class="item item-input-inset">
+        <label class="item-input-wrapper">
+          <input type="text" ng-model="detail.commentData"/>
+        </label>
+        <button class="button button-positive" ng-click="detail.comment(detail.commentData)">
+          POST
+        </button>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>

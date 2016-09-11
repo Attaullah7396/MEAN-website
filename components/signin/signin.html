@@ -1,0 +1,44 @@
+<ion-view  class="background-color";>
+  <div class="bar bar-header background-color">
+    <h1 class="title loginHeader">Login</h1>
+  </div>
+  <ion-content>
+
+    <br/>
+    <br/>
+    <br/>
+    <div style="width:100%;text-align: center;">
+    <img src="https://d21po8gip7hnk5.cloudfront.net/img/logos/tel_logo_png_transparent.png" alt="" width="130">
+   </div>
+    <div class="login_heading">
+      <h2>Welcome!</h2>
+      <p>ENTER YOUR EMAIL ADDRESS</p>
+    </div>
+    <form name="signInForm" style="margin-left:12px;margin-right:12px;">
+
+      <label class="item item-input" style="margin-top: 7px;">
+          <input type="email" ng-model="signin.user.email" required  placeholder="Email"> </label>
+
+      <label class="item item-input" style="margin-top: 16px;">
+          <input type="password" ng-model="signin.user.password" required  placeholder="Password" >
+                  </label>
+
+    </form>
+    <div class="login_heading"><br/>
+      <a href="" style="text-decoration: none;color: gray;">Forget Password</a>
+      <br/>
+      <br/>
+      <button class="button loginFooter" ng-disabled="signInForm.$invalid" ng-click="signin.userLogin(signin.user)">
+          Login
+        </button>
+    </div>
+  </ion-content>
+
+</ion-view>
+
+<div class="bar bar-footer registerFotterBar">
+  <button class="title" ui-sref="join">
+          Register
+        </button>
+  <!--<div class="title" ui-sref="join">Register</div>-->
+</div>

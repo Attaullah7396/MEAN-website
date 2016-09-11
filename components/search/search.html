@@ -1,0 +1,39 @@
+<ion-view>
+  <ion-content>
+
+    <ion-list>
+      <ion-radio ng-model="search.choice" value="T">By name</ion-radio>
+      <ion-radio ng-model="search.choice" value="S">By subject</ion-radio>
+    </ion-list>
+
+    <label class="item item-input">
+    <input type="text" ng-model="search.teach" placeholder="Search Teacher....">
+  </label>
+
+
+
+
+    <div class="list" ng-if="search.choice == 'T'">
+      Teacher:
+      <a class="item item-avatar" ng-show="t.userType == 'teacher'" ng-repeat="t in search.teachers | filter: { name :  search.teach}"
+        ng-if="search.teach">
+
+        <img src="http://icons.iconseeker.com/png/fullsize/nike--apple/nike--apple.png">
+        <h2 ng-click="search.call(t.key)">  {{t.name}}</h2>
+        <p>I'm a {{t.userType}}.</p>
+      </a>
+    </div>
+
+
+    <div class="list" ng-if="search.choice == 'S'">
+      Student
+      <a class="item item-avatar" href="/#/menu/search" ng-repeat="t in search.teachers | filter: { specilizedSubjects :  search.teach}"
+        ng-if="search.teach">
+        <img src="http://icons.iconseeker.com/png/fullsize/nike--apple/nike--apple.png">
+        <h2> {{t.name}}</h2>
+        <p>I'm a {{t.userType}}.</p>
+      </a>
+    </div>
+
+  </ion-content>
+</ion-view>
