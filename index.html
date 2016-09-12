@@ -4,13 +4,24 @@
     <meta charset="UTF-8">
     <title>Demo App</title>
     <meta charset="UTF-8"/>
-    <meta name="viewport" content="width-device-width, initial-scale=1"/>
+    <!--<meta name="viewport" content="width-device-width, initial-scale=1"/>-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/node_modules/material-design-lite/material.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="css/style.css">
+    
+    
+    <!--scripts-->
+    <script src="/node_modules/material-design-lite/material.min.js"></script>
+
+    
+    
 </head>
 <body ng-controller="mainController as app">
 
-<nav class="navbar navbar-dark bg-fade">
+<!--<nav class="navbar navbar-dark bg-fade">
     <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavBar">
@@ -33,7 +44,20 @@
                                 <li>ABC</li>
                             </ul>
                         </li>
-                    </ul>
+                    </ul>-->
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
          <!--           <ul class="dropdown-menu" role="menu">
                         <li class="dropdown-submenu"><a class="dropdown-item" href="#">Semi Conductors</a>
                             <ul class="dropdown-menu">
@@ -68,7 +92,7 @@
                         </li>
                         <li><a class="dropdown-item" href="#">Silicon</a></li>
                     </ul>-->
-                </li>
+                <!--</li>
                 <li class="dropdown2">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown2">Semi Conducters</a>
                     <ul class="dropdown-menu" role="menu">
@@ -115,7 +139,7 @@
     <div class="row">
         <ui-view></ui-view>
     </div>
-</div>
+</div>-->
 
 
 <script src="node_modules/angular/angular.js"></script>
@@ -126,7 +150,7 @@
 <script src="./js/config.js"></script>
 <script src="./components/home/home.js"></script>
 
-<script>
+<!--<script>
     $('ul.nav li.dropdown1').hover(function () {
         $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
     }, function () {
@@ -142,7 +166,220 @@
     }, function () {
         $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
     });
-</script>
+</script>-->
 
+
+
+<!-- Uses a header that contracts as the page scrolls down. -->
+
+<div class="demo-layout-waterfall mdl-layout mdl-js-layout">
+  <header class="mdl-layout__header mdl-layout__header--waterfall">
+    <!-- Top row, always visible -->
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">Company Name</span>
+      <div class="mdl-layout-spacer"></div>
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+                  mdl-textfield--floating-label mdl-textfield--align-right">
+        <label class="mdl-button mdl-js-button mdl-button--icon"
+               for="waterfall-exp">
+          <i class="material-icons">search</i>
+        </label>
+        <div class="mdl-textfield__expandable-holder">
+          <input class="mdl-textfield__input" type="text" name="sample"
+                 id="waterfall-exp">
+        </div>
+      </div>
+    </div>
+    <!-- Bottom row, not visible on scroll -->
+    <div class="mdl-layout__header-row">
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation -->
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="">Shop</a>
+        <a class="mdl-navigation__link" href="">News</a>
+        <a class="mdl-navigation__link" href="">Customize</a>
+        <a class="mdl-navigation__link" href="">Cart</a>
+      </nav>
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Company Name</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href=""><i class="material-icons">home</i> &nbsp;&nbsp;&nbsp;Home</a>
+      <a class="mdl-navigation__link" href=""><i class="material-icons">shopping_cart</i>&nbsp;&nbsp;&nbsp;Shop</a>
+      <a class="mdl-navigation__link" href=""><i class="material-icons">book</i>&nbsp;&nbsp;&nbsp;Blog</a>
+      <a class="mdl-navigation__link" href=""><i class="material-icons">style</i>&nbsp;&nbsp;&nbsp;Style</a>
+    </nav>
+  </div>
+  <main class="mdl-layout__content">
+    <!--<div class="background-mac-image">
+            
+        </div>-->
+        <div class="container">
+    <div class="page-content">
+        <img src="./images/Mac.jpg" alt="mac image" style="width:100%;height:100%;">
+        <!-- Your content goes here -->
+       
+         <div class="align-center">
+            <h5>We have Awesome Products You can search and Buy our Products</h5>
+            <hr/>
+             </div> 
+             <!-- Image card -->
+
+ <div class="mdl-grid">
+<div class="demo-card-image mdl-card mdl-shadow--2dp mdl-cell mdl-cell--7-col">
+  <div class="mdl-card__title mdl-card--expand mdl-cell mdl-cell--7-col"></div> 
+  <div class="mdl-card__actions">
+    <span class="demo-card-image__filename">200$ only</span>
+  </div>
+</div>
+
+<div class="demo-card-image1 mdl-card mdl-shadow--2dp mdl-cell mdl-cell--7-col">
+  <div class="mdl-card__title mdl-card--expand mdl-cell"></div>
+  <div class="mdl-card__actions"> 
+    <span class="demo-card-image1__filename">200$ only</span>
+  </div>
+</div>
+<div class="demo-card-image2 mdl-card mdl-shadow--2dp mdl-cell mdl-cell--7-col">
+  <div class="mdl-card__title mdl-card--expand mdl-cell"></div>
+  <div class="mdl-card__actions"> 
+    <span class="demo-card-image2__filename">200$ only</span>
+  </div>
+</div>
+<div class="demo-card-image3 mdl-card mdl-shadow--2dp mdl-cell mdl-cell--7-col">
+  <div class="mdl-card__title mdl-card--expand mdl-cell"></div>
+  <div class="mdl-card__actions"> 
+    <span class="demo-card-image3__filename">200$ only</span>
+  </div>
+</div>
+</div>
+
+<div class="align-center">
+            <h4>Latest Products</h4>
+            <hr class="latest-product"/>
+  </div> 
+
+
+ <div class="mdl-grid">
+<div class="demo-card-image mdl-card mdl-shadow--2dp mdl-cell mdl-cell--7-col">
+  <div class="mdl-card__title mdl-card--expand mdl-cell mdl-cell--7-col"></div> 
+  <div class="mdl-card__actions">
+    <span class="demo-card-image__filename">200$ only</span>
+  </div>
+</div>
+
+<div class="demo-card-image1 mdl-card mdl-shadow--2dp mdl-cell mdl-cell--7-col">
+  <div class="mdl-card__title mdl-card--expand mdl-cell"></div>
+  <div class="mdl-card__actions"> 
+    <span class="demo-card-image1__filename">200$ only</span>
+  </div>
+</div>
+<div class="demo-card-image2 mdl-card mdl-shadow--2dp mdl-cell mdl-cell--7-col">
+  <div class="mdl-card__title mdl-card--expand mdl-cell"></div>
+  <div class="mdl-card__actions"> 
+    <span class="demo-card-image2__filename">200$ only</span>
+  </div>
+</div>
+<div class="demo-card-image3 mdl-card mdl-shadow--2dp mdl-cell mdl-cell--7-col">
+  <div class="mdl-card__title mdl-card--expand mdl-cell"></div>
+  <div class="mdl-card__actions"> 
+    <span class="demo-card-image3__filename">200$ only</span>
+  </div>
+</div>
+</div>
+
+<!--<button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+  <i class="material-icons">add</i>
+</button>-->
+
+
+   
+   
+   
+   
+   
+   
+   
+    </div>
+   </div>
+<!--footer-->
+<footer class="mdl-mega-footer oxy-color-primary">
+   <div class="mdl-mega-footer--middle-section">
+      <div class="mdl-mega-footer--drop-down-section">
+         <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked="">
+         <h1 class="mdl-mega-footer--heading">About Company Name</h1>
+         <div class="mdl-mega-footer__widget">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, aliquid incidunt accusantium vitae ipsa at! Maiores cum aperiam nihil accusamus inventore maxime perferendis porro consequuntur assumenda ut! Laboriosam beatae, praesentium.</p>
+            <p>An emphasis on user actions makes core functionality immediately apparent and provides waypoints for the user.</p>
+         </div>
+         <div class="mdl-mega-footer__widget"><i class="fa fa-cc-mastercard"></i> &nbsp; <i class="fa fa-cc-visa"></i> &nbsp; <i class="fa fa-cc-amex"></i> &nbsp; <i class="fa fa-cc-diners-club"></i> &nbsp; <i class="fa fa-cc-paypal"></i> &nbsp; <i class="fa fa-cc-jcb"></i></div>
+      </div>
+      <div class="mdl-mega-footer--drop-down-section">
+         <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked="">
+         <h1 class="mdl-mega-footer--heading">Open Hours</h1>
+         <ul class="mdl-mega-footer--link-list mdl-mega-footer--link-list--bordered">
+            <li>Monday <span class="oxy-inline-block oxy-float-right oxy-margin-right-40">10:00 - 20:00</span></li>
+            <li>Tuesday <span class="oxy-inline-block oxy-float-right oxy-margin-right-40">12:00 - 21:00</span></li>
+            <li>Wednesday <span class="oxy-inline-block oxy-float-right oxy-margin-right-40">10:00 - 20:00</span></li>
+            <li>Thursday <span class="oxy-inline-block oxy-float-right oxy-margin-right-40">09:00 - 20:00</span></li>
+            <li>Friday <span class="oxy-inline-block oxy-float-right oxy-margin-right-40">08:00 - 18:00</span></li>
+            <li>Saturday <span class="oxy-inline-block oxy-float-right oxy-margin-right-40">12:00 - 20:00</span></li>
+         </ul>
+      </div>
+      <div class="mdl-mega-footer--drop-down-section">
+         <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked="">
+         <h1 class="mdl-mega-footer--heading">Latest Products</h1>
+         <div class="mdl-mega-footer__widget"><a href="">
+             <img width="60" class="oxy-margin-bottom-10 oxy-margin-right-10" src="./images/mac2.jpg" alt="product thumbnail"></a> <a href="">
+             <img width="60" class="oxy-margin-bottom-10 oxy-margin-right-10" src="./images/mac2.jpg" alt="product thumbnail"></a> <a href="">
+             <img width="60" class="oxy-margin-bottom-10 oxy-margin-right-10" src="./images/mac2.jpg" alt="product thumbnail"></a> <a href="">
+             <img width="60" class="oxy-margin-bottom-10 oxy-margin-right-10" src="./images/mac2.jpg" alt="product thumbnail"></a> <a href="">
+             <img width="60" class="oxy-margin-bottom-10 oxy-margin-right-10" src="./images/mac2.jpg" alt="product thumbnail"></a> <a href="">
+             <img width="60" class="oxy-margin-bottom-10 oxy-margin-right-10" src="./images/mac2.jpg" alt="product thumbnail"></a> <a href="">
+             <img width="60" class="oxy-margin-bottom-10 oxy-margin-right-10" src="./images/mac2.jpg" alt="product thumbnail"></a> <a href="">
+             <img width="60" class="oxy-margin-bottom-10 oxy-margin-right-10" src="./images/mac2.jpg" alt="product thumbnail"></a> <a href="">
+             <img width="60" class="oxy-margin-bottom-10 oxy-margin-right-10" src="./images/mac2.jpg" alt="product thumbnail"></a> <a href="">
+             <img width="60" class="oxy-margin-bottom-10 oxy-margin-right-10" src="./images/mac2.jpg" alt="product thumbnail"></a> <a href="">
+             <img width="60" class="oxy-margin-bottom-10 oxy-margin-right-10" src="./images/mac2.jpg" alt="product thumbnail"></a> <a href="">
+             <img width="60" class="oxy-margin-bottom-10 oxy-margin-right-10" src="./images/mac2.jpg" alt="product thumbnail"></a></div>
+      </div>
+      <div class="mdl-mega-footer--drop-down-section">
+         <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked="">
+         <h1 class="mdl-mega-footer--heading">Our Store</h1>
+         <div class="mdl-mega-footer__widget">
+            <p>Contact us any time, we would love to hear from you.</p>
+            <p>Birmingham Bulring<br>MSU 8-9, Levels 7&amp;9<br>Birmingham B5 4BG<br>(44) 121 616 2169<br></p>
+            <p><a href="#">company.com</a><br>info@company.com</p>
+            <p><a href="#" class="mdl-button mdl-js-button mdl-button--icon" data-upgraded=",MaterialButton"><i class="fa fa-facebook"></i></a> <a href="#" class="mdl-button mdl-js-button mdl-button--icon" data-upgraded=",MaterialButton"><i class="fa fa-twitter"></i></a> <a href="#" class="mdl-button mdl-js-button mdl-button--icon" data-upgraded=",MaterialButton"><i class="fa fa-flickr"></i></a> <a href="#" class="mdl-button mdl-js-button mdl-button--icon" data-upgraded=",MaterialButton"><i class="fa fa-linkedin"></i></a></p>
+         </div>
+      </div>
+   </div>
+   <div class="mdl-mega-footer--bottom-section">
+      <div class="mdl-logo">Company Name</div>
+      <ul class="mdl-mega-footer--link-list">
+         <li><a href="">Conditions</a></li>
+         <li><a href="">Help</a></li>
+         <li><a href="">Privacy</a></li>
+         <li><a href="">Terms</a></li>
+      </ul>
+   </div>
+</footer>
+
+  </main>
+
+</div>
+<!--<div class="shopping-cart ">
+<button class="shopping-cart mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+  <i class="material-icons">add</i>
+</button>
+</div>-->
+<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--fab mdl-button--colored oxy-button-fab oxy-js-button-shopping-cart mdl-badge oxy-button-fab__badge" data-badge="0" data-upgraded=",MaterialButton,MaterialRipple">
+    <i class="material-icons">shopping_cart</i>
+    <span class="mdl-button__ripple-container">
+        <span class="mdl-ripple is-animating" style="width: 160.392px; height: 160.392px; transform: translate(-50%, -50%) translate(37px, 29px);">
+            </span>
+            </span>
+            </button>
 </body>
 </html>

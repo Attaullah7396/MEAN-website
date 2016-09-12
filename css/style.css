@@ -12,3 +12,134 @@
     padding-left:40px;
     padding-right:40px
 }
+
+
+
+/*material Design css*/
+
+.demo-layout-waterfall .mdl-layout__header-row .mdl-navigation__link:last-of-type  {
+  padding-right: 0;
+}
+a:hover{
+  text-decoration: none;  
+}
+
+.align-center{
+    text-align: center;
+}
+.demo-card-image.mdl-card {
+  width: 256px;
+  height: 256px;
+  background: url('../images/mac2.jpg') center / cover;
+}
+.demo-card-image > .mdl-card__actions {
+  height: 52px;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.2);
+}
+.demo-card-image__filename {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+}
+.demo-card-image1.mdl-card {
+  width: 256px;
+  height: 256px;
+  background: url('../images/handsfree.jpg') center / cover;
+}
+.demo-card-image1 > .mdl-card__actions {
+  height: 52px;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.2);
+}
+.demo-card-image1__filename {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.demo-card-image2.mdl-card {
+  width: 256px;
+  height: 256px;
+  background: url('../images/led.jpg') center / cover;
+}
+.demo-card-image2 > .mdl-card__actions {
+  height: 52px;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.2);
+}
+.demo-card-image2__filename {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.demo-card-image3.mdl-card {
+  width: 256px;
+  height: 256px;
+  background: url('../images/Iphone.jpg') center / cover;
+}
+.demo-card-image3 > .mdl-card__actions {
+  height: 52px;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.2);
+}
+.demo-card-image3__filename {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+hr {
+    display: block;
+    height: 7px;
+    border: 0;
+    border-top: 2px solid #3f51b5;
+    margin: 1em 0;
+    margin-left: 380px;
+    padding: 0;
+    width: 35%;
+}
+.latest-product{
+    display: block;
+    height: 7px;
+    border: 0;
+    border-top: 2px solid #3f51b5;
+    margin: 1em 0;
+    margin-left: 538px;
+    padding: 0;
+    width: 5%;
+}
+
+/*.shopping-cart{
+  position: absolute;
+  bottom: 0;
+  right: 37px;
+}*/
+
+.oxy-button-fab{
+    position: fixed;
+    bottom: 16px;
+    right: 32px;
+    z-index: 100;
+}
+
+.mdl-mega-footer{
+  padding: 16px 40px;
+}
+
+.mdl-mega-footer--drop-down-section{
+  padding-left: 63px;
+}
+.oxy-float-right {
+    float: right!important;
+}
+.oxy-margin-right-40 {
+    margin-right: 40px!important;
+}
+.oxy-margin-right-10 {
+    margin-right: 10px!important;
+}
+.oxy-margin-bottom-10 {
+    margin-bottom: 10px!important;
+}
