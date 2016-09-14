@@ -29,12 +29,23 @@ a:hover{
 .align-center{
     text-align: center;
 }
+.same > .mdl-card__actions {
+    height: 52px;
+    padding: 16px;
+    background: rgba(0, 0, 0, 0.2);
+}
+.same > .demo-card-image4__filename {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+}
+
 .demo-card-image.mdl-card {
   width: 256px;
   height: 256px;
-  background: url('../images/mac2.jpg') center / cover;
+  background: url('../images/img1.jpg') center / cover;
 }
-.demo-card-image > .mdl-card__actions {
+/*.demo-card-image > .mdl-card__actions {
   height: 52px;
   padding: 16px;
   background: rgba(0, 0, 0, 0.2);
@@ -43,13 +54,13 @@ a:hover{
   color: #fff;
   font-size: 14px;
   font-weight: 500;
-}
+}*/
 .demo-card-image1.mdl-card {
   width: 256px;
   height: 256px;
-  background: url('../images/handsfree.jpg') center / cover;
+  background: url('../images/img8.jpg') center / cover;
 }
-.demo-card-image1 > .mdl-card__actions {
+/*.demo-card-image1 > .mdl-card__actions {
   height: 52px;
   padding: 16px;
   background: rgba(0, 0, 0, 0.2);
@@ -58,14 +69,14 @@ a:hover{
   color: #fff;
   font-size: 14px;
   font-weight: 500;
-}
+}*/
 
 .demo-card-image2.mdl-card {
   width: 256px;
   height: 256px;
-  background: url('../images/led.jpg') center / cover;
+  background: url('../images/img2.jpg') center / cover;
 }
-.demo-card-image2 > .mdl-card__actions {
+/*.demo-card-image2 > .mdl-card__actions {
   height: 52px;
   padding: 16px;
   background: rgba(0, 0, 0, 0.2);
@@ -74,14 +85,14 @@ a:hover{
   color: #fff;
   font-size: 14px;
   font-weight: 500;
-}
+}*/
 
 .demo-card-image3.mdl-card {
   width: 256px;
   height: 256px;
-  background: url('../images/Iphone.jpg') center / cover;
+  background: url('../images/img3.jpg') center / cover;
 }
-.demo-card-image3 > .mdl-card__actions {
+/*.demo-card-image3 > .mdl-card__actions {
   height: 52px;
   padding: 16px;
   background: rgba(0, 0, 0, 0.2);
@@ -90,7 +101,28 @@ a:hover{
   color: #fff;
   font-size: 14px;
   font-weight: 500;
+}*/
+.demo-card-image4.mdl-card {
+    width: 256px;
+    height: 256px;
+    background: url('../images/img4.jpg') center / cover;
 }
+.demo-card-image5.mdl-card {
+    width: 256px;
+    height: 256px;
+    background: url('../images/img5.jpg') center / cover;
+}
+.demo-card-image6.mdl-card {
+    width: 256px;
+    height: 256px;
+    background: url('../images/img6.jpg') center / cover;
+}
+.demo-card-image7.mdl-card {
+    width: 256px;
+    height: 256px;
+    background: url('../images/img7.png') center / cover;
+}
+
 
 hr {
     display: block;
@@ -103,14 +135,8 @@ hr {
     width: 35%;
 }
 .latest-product{
-    display: block;
-    height: 7px;
-    border: 0;
-    border-top: 2px solid #3f51b5;
-    margin: 1em 0;
-    margin-left: 538px;
-    padding: 0;
-    width: 5%;
+    margin: 0 auto;
+    width: 25%;
 }
 
 /*.shopping-cart{

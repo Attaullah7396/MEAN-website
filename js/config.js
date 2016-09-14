@@ -3,11 +3,17 @@ angular.module("demoApp")
 
         $stateProvider
             .state('home', {
-                url: "/home",
-                templateUrl: "./components/home/home.html",
-                controller: "HomeController as home"
-            }
-        )
+                    url: "/",
+                    templateUrl: "./components/home/home.html",
+                    controller: "HomeController as home"
+                }
+            )
+            .state('allList', {
+                    url: "/allProducts",
+                    templateUrl: "./components/all/all.html",
+                    controller: "AllController as allProduct"
+                }
+            )
             .state('semi', {
                     url: "/semi",
                     templateUrl: "./components/semi/semi.html",
@@ -26,7 +32,7 @@ angular.module("demoApp")
                     controller: "ConnectorController as connector"
                 }
             );
-            
-        $urlRouterProvider.otherwise('/home')
+
+        $urlRouterProvider.otherwise('/')
 
     });
