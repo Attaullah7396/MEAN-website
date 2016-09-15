@@ -31,7 +31,25 @@ angular.module("demoApp")
                     templateUrl: "./components/connectors/connectors.html",
                     controller: "ConnectorController as connector"
                 }
-            );
+            )
+            .state('viewsemi', {
+                    url: "/view/semiconductor",
+                    templateUrl: "./components/viewsemi/viewsemi.html",
+                    controller: "ViewSemiController as viewsemi"
+                }
+            )
+            .state('viewdiode', {
+                    url: "/view/diode",
+                    templateUrl: "./components/viewdiode/viewdiode.html",
+                    controller: "ViewDiodeController as viewdiode"
+                }
+            )
+            .state('viewconnector', {
+                    url: "/view/connector",
+                    templateUrl: "./components/viewconnector/viewconnector.html",
+                    controller: "ViewConnectorController as viewconnector"
+                }
+            )
 
         $urlRouterProvider.otherwise('/')
 
