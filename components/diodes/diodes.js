@@ -1,9 +1,10 @@
 angular.module('app.diodes', [])
-    .controller("DiodeController", [DiodeController]);
+    .controller("DiodeController", ['listService',DiodeController]);
 
-function DiodeController() {
+function DiodeController(listService) {
 
     var _self = this;
+    _self.diodeArray = listService.diodeArray;
 
 
 }

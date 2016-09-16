@@ -7,14 +7,14 @@
     <!--<meta name="viewport" content="width-device-width, initial-scale=1"/>-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="/node_modules/material-design-lite/material.min.css">
+    <link rel="stylesheet" href="./node_modules/material-design-lite/material.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
     <link rel="stylesheet" href="css/style.css">
 
 
     <!--scripts-->
-    <script src="/node_modules/material-design-lite/material.min.js"></script>
+    <script src="./node_modules/material-design-lite/material.min.js"></script>
 
 
 </head>
@@ -45,36 +45,21 @@
                 </ul>
                 <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
                     for="semi">
-                    <li class="mdl-menu__item">Germanium</li>
-                    <li class="mdl-menu__item">Silicon</li>
-                    <li class="mdl-menu__item">Silicon carbide</li>
-                    <li class="mdl-menu__item">Gallium arsenide</li>
-                    <li class="mdl-menu__item">Gallium Nitride</li>
-                    <li class="mdl-menu__item">allium phosphide</li>
-                    <li class="mdl-menu__item">Lead sulphide</li>
+                    <li class="mdl-menu__item" ui-sref="viewsemi({index:$index})" ng-repeat="item in app.arr1">
+                        {{item.name}}
+                    </li>
                 </ul>
                 <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
                     for="diodes">
-                    <li class="mdl-menu__item">Backward diode</li>
-                    <li class="mdl-menu__item">BARITT diode</li>
-                    <li class="mdl-menu__item">Laser diode</li>
-                    <li class="mdl-menu__item">Gunn diode</li>
-                    <li class="mdl-menu__item">Photodiode</li>
-                    <li class="mdl-menu__item">PIN diode</li>
-                    <li class="mdl-menu__item">PN junction</li>
-                    <li class="mdl-menu__item">Tunnel diode</li>
-                    <li class="mdl-menu__item">Zener diode</li>
+                    <li class="mdl-menu__item" ui-sref="viewdiode({index:$index})" ng-repeat="item in app.arr2">
+                        {{item.name}}
+                    </li>
                 </ul>
                 <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
                     for="connectors">
-                    <li class="mdl-menu__item">Audio and Video connector</li>
-                    <li class="mdl-menu__item">Automotive connector</li>
-                    <li class="mdl-menu__item">Backplane connector</li>
-                    <li class="mdl-menu__item">Card Edge connector</li>
-                    <li class="mdl-menu__item">Circular connector</li>
-                    <li class="mdl-menu__item">D-sub connector</li>
-                    <li class="mdl-menu__item">Memory connector</li>
-                    <li class="mdl-menu__item">Power connector</li>
+                    <li class="mdl-menu__item" ui-sref="viewconnector({index:$index})" ng-repeat="item in app.arr3">
+                        {{item.name}}
+                    </li>
                 </ul>
             </div>
         </div>
@@ -84,113 +69,114 @@
     <div class="mdl-layout__drawer">
         <span class="mdl-layout-title">Company Name</span>
         <nav class="mdl-navigation">
-            <a class="mdl-navigation__link" href=""><i class="material-icons">home</i> &nbsp;&nbsp;&nbsp;Home</a>
-            <a class="mdl-navigation__link" href=""><i
+            <a class="mdl-navigation__link" ui-sref="home"><i class="material-icons">home</i> &nbsp;&nbsp;&nbsp;Home</a>
+            <a class="mdl-navigation__link" ui-sref="allList"><i
                     class="material-icons">shopping_cart</i>&nbsp;&nbsp;&nbsp;All products</a>
-            <a class="mdl-navigation__link" href=""><i class="material-icons">book</i>&nbsp;&nbsp;&nbsp;Semi conductors</a>
-            <a class="mdl-navigation__link" href=""><i class="material-icons">style</i>&nbsp;&nbsp;&nbsp;Diodes</a>
-            <a class="mdl-navigation__link" href=""><i class="material-icons">style</i>&nbsp;&nbsp;&nbsp;Connectors</a>
+            <a class="mdl-navigation__link" ui-sref="semi"><i class="material-icons">book</i>&nbsp;&nbsp;&nbsp;Semi
+                conductors</a>
+            <a class="mdl-navigation__link" ui-sref="diodes"><i class="material-icons">style</i>&nbsp;&nbsp;&nbsp;Diodes</a>
+            <a class="mdl-navigation__link" ui-sref="connectors"><i class="material-icons">style</i>&nbsp;&nbsp;&nbsp;Connectors</a>
         </nav>
     </div>
 
     <main class="mdl-layout__content">
         <ui-view></ui-view>
         <footer class="mdl-mega-footer oxy-color-primary">
-    <div class="mdl-mega-footer--middle-section">
-        <div class="mdl-mega-footer--drop-down-section">
-            <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked="">
-            <h1 class="mdl-mega-footer--heading">About Company Name</h1>
-            <div class="mdl-mega-footer__widget">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, aliquid incidunt
-                    accusantium vitae ipsa at! Maiores cum aperiam nihil accusamus inventore maxime perferendis
-                    porro consequuntur assumenda ut! Laboriosam beatae, praesentium.</p>
-                <p>An emphasis on user actions makes core functionality immediately apparent and provides
-                    waypoints for the user.</p>
+            <div class="mdl-mega-footer--middle-section">
+                <div class="mdl-mega-footer--drop-down-section">
+                    <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked="">
+                    <h1 class="mdl-mega-footer--heading">About Company Name</h1>
+                    <div class="mdl-mega-footer__widget">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, aliquid incidunt
+                            accusantium vitae ipsa at! Maiores cum aperiam nihil accusamus inventore maxime perferendis
+                            porro consequuntur assumenda ut! Laboriosam beatae, praesentium.</p>
+                        <p>An emphasis on user actions makes core functionality immediately apparent and provides
+                            waypoints for the user.</p>
+                    </div>
+                    <div class="mdl-mega-footer__widget"><i class="fa fa-cc-mastercard"></i> &nbsp; <i
+                            class="fa fa-cc-visa"></i> &nbsp; <i class="fa fa-cc-amex"></i> &nbsp; <i
+                            class="fa fa-cc-diners-club"></i> &nbsp; <i class="fa fa-cc-paypal"></i> &nbsp; <i
+                            class="fa fa-cc-jcb"></i></div>
+                </div>
+                <!--        <div class="mdl-mega-footer&#45;&#45;drop-down-section">
+                            <input class="mdl-mega-footer&#45;&#45;heading-checkbox" type="checkbox" checked="">
+                            <h1 class="mdl-mega-footer&#45;&#45;heading">Open Hours</h1>
+                            <ul class="mdl-mega-footer&#45;&#45;link-list mdl-mega-footer&#45;&#45;link-list&#45;&#45;bordered">
+                                <li>Monday <span
+                                        class="oxy-inline-block oxy-float-right oxy-margin-right-40">10:00 - 20:00</span></li>
+                                <li>Tuesday <span
+                                        class="oxy-inline-block oxy-float-right oxy-margin-right-40">12:00 - 21:00</span></li>
+                                <li>Wednesday <span
+                                        class="oxy-inline-block oxy-float-right oxy-margin-right-40">10:00 - 20:00</span></li>
+                                <li>Thursday <span
+                                        class="oxy-inline-block oxy-float-right oxy-margin-right-40">09:00 - 20:00</span></li>
+                                <li>Friday <span
+                                        class="oxy-inline-block oxy-float-right oxy-margin-right-40">08:00 - 18:00</span></li>
+                                <li>Saturday <span
+                                        class="oxy-inline-block oxy-float-right oxy-margin-right-40">12:00 - 20:00</span></li>
+                            </ul>
+                        </div>-->
+                <div class="mdl-mega-footer--drop-down-section">
+                    <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked="">
+                    <h1 class="mdl-mega-footer--heading">Latest Products</h1>
+                    <div class="mdl-mega-footer__widget"><a href="">
+                        <img width="60" class="oxy-margin-bottom-10 oxy-margin-right-10" src="./images/mac2.jpg"
+                             alt="product thumbnail"></a> <a href="">
+                        <img width="60" class="oxy-margin-bottom-10 oxy-margin-right-10" src="./images/mac2.jpg"
+                             alt="product thumbnail"></a> <a href="">
+                        <img width="60" class="oxy-margin-bottom-10 oxy-margin-right-10" src="./images/mac2.jpg"
+                             alt="product thumbnail"></a> <a href="">
+                        <img width="60" class="oxy-margin-bottom-10 oxy-margin-right-10" src="./images/mac2.jpg"
+                             alt="product thumbnail"></a> <a href="">
+                        <img width="60" class="oxy-margin-bottom-10 oxy-margin-right-10" src="./images/mac2.jpg"
+                             alt="product thumbnail"></a> <a href="">
+                        <img width="60" class="oxy-margin-bottom-10 oxy-margin-right-10" src="./images/mac2.jpg"
+                             alt="product thumbnail"></a> <a href="">
+                        <img width="60" class="oxy-margin-bottom-10 oxy-margin-right-10" src="./images/mac2.jpg"
+                             alt="product thumbnail"></a> <a href="">
+                        <img width="60" class="oxy-margin-bottom-10 oxy-margin-right-10" src="./images/mac2.jpg"
+                             alt="product thumbnail"></a> <a href="">
+                        <img width="60" class="oxy-margin-bottom-10 oxy-margin-right-10" src="./images/mac2.jpg"
+                             alt="product thumbnail"></a> <a href="">
+                        <img width="60" class="oxy-margin-bottom-10 oxy-margin-right-10" src="./images/mac2.jpg"
+                             alt="product thumbnail"></a> <a href="">
+                        <img width="60" class="oxy-margin-bottom-10 oxy-margin-right-10" src="./images/mac2.jpg"
+                             alt="product thumbnail"></a> <a href="">
+                        <img width="60" class="oxy-margin-bottom-10 oxy-margin-right-10" src="./images/mac2.jpg"
+                             alt="product thumbnail"></a></div>
+                </div>
+                <div class="mdl-mega-footer--drop-down-section">
+                    <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked="">
+                    <h1 class="mdl-mega-footer--heading">Our Store</h1>
+                    <div class="mdl-mega-footer__widget">
+                        <p>Contact us any time, we would love to hear from you.</p>
+                        <p>Birmingham Bulring<br>MSU 8-9, Levels 7&amp;9<br>Birmingham B5 4BG<br>(44) 121 616 2169<br>
+                        </p>
+                        <p><a href="#">company.com</a><br>info@company.com</p>
+                        <p><a href="#" class="mdl-button mdl-js-button mdl-button--icon"
+                              data-upgraded=",MaterialButton"><i class="fa fa-facebook"></i></a> <a href="#"
+                                                                                                    class="mdl-button mdl-js-button mdl-button--icon"
+                                                                                                    data-upgraded=",MaterialButton"><i
+                                class="fa fa-twitter"></i></a> <a href="#"
+                                                                  class="mdl-button mdl-js-button mdl-button--icon"
+                                                                  data-upgraded=",MaterialButton"><i
+                                class="fa fa-flickr"></i></a> <a href="#"
+                                                                 class="mdl-button mdl-js-button mdl-button--icon"
+                                                                 data-upgraded=",MaterialButton"><i
+                                class="fa fa-linkedin"></i></a></p>
+                    </div>
+                </div>
             </div>
-            <div class="mdl-mega-footer__widget"><i class="fa fa-cc-mastercard"></i> &nbsp; <i
-                    class="fa fa-cc-visa"></i> &nbsp; <i class="fa fa-cc-amex"></i> &nbsp; <i
-                    class="fa fa-cc-diners-club"></i> &nbsp; <i class="fa fa-cc-paypal"></i> &nbsp; <i
-                    class="fa fa-cc-jcb"></i></div>
-        </div>
-<!--        <div class="mdl-mega-footer&#45;&#45;drop-down-section">
-            <input class="mdl-mega-footer&#45;&#45;heading-checkbox" type="checkbox" checked="">
-            <h1 class="mdl-mega-footer&#45;&#45;heading">Open Hours</h1>
-            <ul class="mdl-mega-footer&#45;&#45;link-list mdl-mega-footer&#45;&#45;link-list&#45;&#45;bordered">
-                <li>Monday <span
-                        class="oxy-inline-block oxy-float-right oxy-margin-right-40">10:00 - 20:00</span></li>
-                <li>Tuesday <span
-                        class="oxy-inline-block oxy-float-right oxy-margin-right-40">12:00 - 21:00</span></li>
-                <li>Wednesday <span
-                        class="oxy-inline-block oxy-float-right oxy-margin-right-40">10:00 - 20:00</span></li>
-                <li>Thursday <span
-                        class="oxy-inline-block oxy-float-right oxy-margin-right-40">09:00 - 20:00</span></li>
-                <li>Friday <span
-                        class="oxy-inline-block oxy-float-right oxy-margin-right-40">08:00 - 18:00</span></li>
-                <li>Saturday <span
-                        class="oxy-inline-block oxy-float-right oxy-margin-right-40">12:00 - 20:00</span></li>
-            </ul>
-        </div>-->
-        <div class="mdl-mega-footer--drop-down-section">
-            <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked="">
-            <h1 class="mdl-mega-footer--heading">Latest Products</h1>
-            <div class="mdl-mega-footer__widget"><a href="">
-                <img width="60" class="oxy-margin-bottom-10 oxy-margin-right-10" src="./images/mac2.jpg"
-                     alt="product thumbnail"></a> <a href="">
-                <img width="60" class="oxy-margin-bottom-10 oxy-margin-right-10" src="./images/mac2.jpg"
-                     alt="product thumbnail"></a> <a href="">
-                <img width="60" class="oxy-margin-bottom-10 oxy-margin-right-10" src="./images/mac2.jpg"
-                     alt="product thumbnail"></a> <a href="">
-                <img width="60" class="oxy-margin-bottom-10 oxy-margin-right-10" src="./images/mac2.jpg"
-                     alt="product thumbnail"></a> <a href="">
-                <img width="60" class="oxy-margin-bottom-10 oxy-margin-right-10" src="./images/mac2.jpg"
-                     alt="product thumbnail"></a> <a href="">
-                <img width="60" class="oxy-margin-bottom-10 oxy-margin-right-10" src="./images/mac2.jpg"
-                     alt="product thumbnail"></a> <a href="">
-                <img width="60" class="oxy-margin-bottom-10 oxy-margin-right-10" src="./images/mac2.jpg"
-                     alt="product thumbnail"></a> <a href="">
-                <img width="60" class="oxy-margin-bottom-10 oxy-margin-right-10" src="./images/mac2.jpg"
-                     alt="product thumbnail"></a> <a href="">
-                <img width="60" class="oxy-margin-bottom-10 oxy-margin-right-10" src="./images/mac2.jpg"
-                     alt="product thumbnail"></a> <a href="">
-                <img width="60" class="oxy-margin-bottom-10 oxy-margin-right-10" src="./images/mac2.jpg"
-                     alt="product thumbnail"></a> <a href="">
-                <img width="60" class="oxy-margin-bottom-10 oxy-margin-right-10" src="./images/mac2.jpg"
-                     alt="product thumbnail"></a> <a href="">
-                <img width="60" class="oxy-margin-bottom-10 oxy-margin-right-10" src="./images/mac2.jpg"
-                     alt="product thumbnail"></a></div>
-        </div>
-        <div class="mdl-mega-footer--drop-down-section">
-            <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked="">
-            <h1 class="mdl-mega-footer--heading">Our Store</h1>
-            <div class="mdl-mega-footer__widget">
-                <p>Contact us any time, we would love to hear from you.</p>
-                <p>Birmingham Bulring<br>MSU 8-9, Levels 7&amp;9<br>Birmingham B5 4BG<br>(44) 121 616 2169<br>
-                </p>
-                <p><a href="#">company.com</a><br>info@company.com</p>
-                <p><a href="#" class="mdl-button mdl-js-button mdl-button--icon"
-                      data-upgraded=",MaterialButton"><i class="fa fa-facebook"></i></a> <a href="#"
-                                                                                            class="mdl-button mdl-js-button mdl-button--icon"
-                                                                                            data-upgraded=",MaterialButton"><i
-                        class="fa fa-twitter"></i></a> <a href="#"
-                                                          class="mdl-button mdl-js-button mdl-button--icon"
-                                                          data-upgraded=",MaterialButton"><i
-                        class="fa fa-flickr"></i></a> <a href="#"
-                                                         class="mdl-button mdl-js-button mdl-button--icon"
-                                                         data-upgraded=",MaterialButton"><i
-                        class="fa fa-linkedin"></i></a></p>
-            </div>
-        </div>
-    </div>
-<!--    <div class="mdl-mega-footer&#45;&#45;bottom-section">
-        <div class="mdl-logo">Company Name</div>
-        <ul class="mdl-mega-footer&#45;&#45;link-list">
-            <li><a href="">Conditions</a></li>
-            <li><a href="">Help</a></li>
-            <li><a href="">Privacy</a></li>
-            <li><a href="">Terms</a></li>
-        </ul>
-    </div>-->
-</footer>
+            <!--    <div class="mdl-mega-footer&#45;&#45;bottom-section">
+                    <div class="mdl-logo">Company Name</div>
+                    <ul class="mdl-mega-footer&#45;&#45;link-list">
+                        <li><a href="">Conditions</a></li>
+                        <li><a href="">Help</a></li>
+                        <li><a href="">Privacy</a></li>
+                        <li><a href="">Terms</a></li>
+                    </ul>
+                </div>-->
+        </footer>
     </main>
     <!--<main class="mdl-layout__content">
         &lt;!&ndash;<div class="background-mac-image">
@@ -283,7 +269,6 @@
     </main>-->
 
 
-
 </div>
 <!--<div class="shopping-cart ">
 <button class="shopping-cart mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
@@ -301,7 +286,7 @@
 </button>
 
 <script src="node_modules/angular/angular.js"></script>
-<script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+<!--<script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>-->
 <script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
 <script src="./js/app.js"></script>
 <script src="./js/config.js"></script>
@@ -313,6 +298,9 @@
 <script src="./components/viewsemi/viewsemi.js"></script>
 <script src="./components/viewdiode/viewdiode.js"></script>
 <script src="./components/viewconnector/viewconnector.js"></script>
+
+<!--services-->
+<script src="./services/listService.js"></script>
 
 <!--<nav class="navbar navbar-dark bg-fade">
     <div class="container-fluid">

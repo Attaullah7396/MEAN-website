@@ -1,22 +1,58 @@
-<form name=searchForm>
-    <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
-        <label class="mdl-button mdl-js-button mdl-button--icon" for="sample6">
-            <i id="sample-expandable" class="material-icons">search</i>
-        </label>
-        <div class="mdl-textfield__expandable-holder"  style="width:500px !important;">
-            <input class="mdl-textfield__input" type="text" id="sample6">
-            <label class="mdl-textfield__label" for="sample-expandable">Expandable Input</label>
-        </div>
+
+<form>
+    <div style="width: 80%; margin-left:100px;margin-right: 100px" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label align-center">
+        <input class="mdl-textfield__input" ng-model="allProduct.search" style="width:100%;outline: none" type="text" id="sample3">
+        <label class="mdl-textfield__label" for="sample3">Search here..</label>
     </div>
 </form>
 
+<div class="align-center">
+    <h4>Semi Conductors</h4>
+    <hr style="width: 43%"/>
+</div>
 <ul class="demo-list-icon mdl-list">
-  <li class="mdl-list__item">
-      <a href="">
+    <li class="mdl-list__item" ng-repeat="item in allProduct.arr1 | filter : allProduct.search track by $index">
+
     <span class="mdl-list__item-primary-content">
         <i class="material-icons mdl-list__item-icon">person</i>
-        Bryan Cranston
+              <a ui-sref="viewsemi({index:$index})">
+        {{item.name}}
+                      </a>
     </span>
-    </a>
-  </li>
+
+    </li>
+</ul>
+
+<div class="align-center">
+    <h4>Diodes</h4>
+    <hr style="width: 43%"/>
+</div>
+<ul class="demo-list-icon mdl-list">
+    <li class="mdl-list__item" ng-repeat="item in allProduct.arr2 | filter : allProduct.search track by $index">
+
+    <span class="mdl-list__item-primary-content">
+        <i class="material-icons mdl-list__item-icon">person</i>
+                <a ui-sref="viewdiode({index:$index})">
+        {{item.name}}
+                            </a>
+    </span>
+
+    </li>
+</ul>
+
+<div class="align-center">
+    <h4>Connectors</h4>
+    <hr style="width: 43%"/>
+</div>
+<ul class="demo-list-icon mdl-list">
+    <li class="mdl-list__item" ng-repeat="item in allProduct.arr3 | filter : allProduct.search track by $index">
+
+    <span class="mdl-list__item-primary-content">
+        <i class="material-icons mdl-list__item-icon">person</i>
+                <a ui-sref="viewconnector({index:$index})">
+        {{item.name}}
+                            </a>
+    </span>
+
+    </li>
 </ul>

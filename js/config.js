@@ -33,23 +33,23 @@ angular.module("demoApp")
                 }
             )
             .state('viewsemi', {
-                    url: "/view/semiconductor",
+                    url: "/view/semiconductor/:index",
                     templateUrl: "./components/viewsemi/viewsemi.html",
                     controller: "ViewSemiController as viewsemi"
                 }
             )
             .state('viewdiode', {
-                    url: "/view/diode",
+                    url: "/view/diode/:index",
                     templateUrl: "./components/viewdiode/viewdiode.html",
                     controller: "ViewDiodeController as viewdiode"
                 }
             )
             .state('viewconnector', {
-                    url: "/view/connector",
+                    url: "/view/connector/:index",
                     templateUrl: "./components/viewconnector/viewconnector.html",
                     controller: "ViewConnectorController as viewconnector"
                 }
-            )
+            );
 
         $urlRouterProvider.otherwise('/')
 

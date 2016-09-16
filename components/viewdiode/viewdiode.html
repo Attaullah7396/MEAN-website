@@ -1,0 +1,29 @@
+<div class="align-center">
+    <h4>Part details</h4>
+    <hr style="width: 40%"/>
+</div>
+
+<table style="padding: 50px;margin:0 auto; margin-bottom: 150px;" class="align-center mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+    <thead>
+    <tr>
+        <th>Part Image</th>
+        <th>Job Part no.</th>
+        <th>Mfr. Part no.</th>
+        <th class="mdl-data-table__cell--non-numeric">Mfr</th>
+        <th class="mdl-data-table__cell--non-numeric">Description</th>
+        <th>Availability</th>
+        <th>Price</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td style="width:60px;height:60px" class="mdl-data-table__cell--non-numeric"><img style="width:60px;height:60px" src="./images/repeat/{{viewdiode.diodeObj.img}}.jpg" alt=""></td>
+        <td>{{viewdiode.diodeObj.part}}</td>
+        <td>{{viewdiode.diodeObj.part2}}</td>
+        <td>{{viewdiode.diodeObj.mfc}}</td>
+        <td>{{viewdiode.diodeObj.desc}}</td>
+        <td>{{viewdiode.diodeObj.avail}}</td>
+        <td>${{viewdiode.diodeObj.price}}</td>
+    </tr>
+    </tbody>
+</table>

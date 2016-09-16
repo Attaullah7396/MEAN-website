@@ -1,9 +1,10 @@
 angular.module('app.connectors', [])
-    .controller("ConnectorController", [ConnectorController]);
+    .controller("ConnectorController", ['listService',ConnectorController]);
 
-function ConnectorController() {
+function ConnectorController(listService) {
 
     var _self = this;
+    _self.connectorArray = listService.connectorArray;
 
 
 }
