@@ -6,6 +6,7 @@
 <table style="padding: 50px;margin:0 auto; margin-bottom: 150px;" class="align-center mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
     <thead>
     <tr>
+        <th class="mdl-data-table__cell--non-numeric">Part Name</th>
         <th>Part Image</th>
         <th>Job Part no.</th>
         <th>Mfr. Part no.</th>
@@ -17,7 +18,8 @@
     </thead>
     <tbody>
     <tr>
-        <td style="width:60px;height:60px" class="mdl-data-table__cell--non-numeric"><img style="width:60px;height:60px" src="./images/repeat/{{viewdiode.diodeObj.img}}.jpg" alt=""></td>
+        <td class="mdl-data-table__cell--non-numeric">{{viewdiode.diodeObj.name}}</td>
+        <td style="width:60px;height:60px;overflow: hidden"><img style="width:60px;height:60px" src="./images/repeat/{{viewdiode.diodeObj.img}}.jpg" alt=""></td>
         <td>{{viewdiode.diodeObj.part}}</td>
         <td>{{viewdiode.diodeObj.part2}}</td>
         <td>{{viewdiode.diodeObj.mfc}}</td>
